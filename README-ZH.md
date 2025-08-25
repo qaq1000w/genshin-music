@@ -15,8 +15,35 @@
 
 你可以使用 `npm run build:genshin`  或  `npm run build:sky` 构建生产服务器, 或者使用 `npm run build:all` 构建两个程序
 
-使用 `npm run preview:genshin`  或  `npm run preview:sky` 来启动已经构建好的服务器 (使用这种方法可以大幅减少资源占用)
+使用 `npm run preview:genshin`  或  `npm run preview:sky` 来启动已经构建好的生产服务器 (使用这种方法可以大幅减少资源占用)
 windows构建windows运行，linux构建linux运行
+
+# (推荐)构建静态文件
+
+使用 `npm run build:all-no-root` 同时构建下面的两个文件夹
+
+使用 `npm run bdev-tauri:sky` 构建光遇静态文件
+
+使用 `npm run dev-tauri:genshin` 构建原神静态文件
+
+然后，你应该可以在`\genshin-music-main\build`文件夹下找到`skyMusic`或`genshin`文件夹
+
+如果你想要修改资源路径，到`\genshin-music-main\scripts\buildApp.js`12，13行修改
+
+下面是一个nginx配置文件示例:
+
+    location /原神音乐 {
+        alias D:\AAAAAAAAAAAAAAA\nginx-1.27.2\html\genshin;
+        index index.html;
+        try_files $uri $uri/ /genshin/keybinds.html;
+    }
+
+    location /光遇音乐 {
+        alias D:\AAAAAAAAAAAAAAA\nginx-1.27.2\html\skyMusic;
+        index index.html;
+        try_files $uri $uri/ /skyMusic/keybinds.html;
+    }
+
 
 
 # 寻找翻译人员
