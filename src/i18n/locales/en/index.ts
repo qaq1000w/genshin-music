@@ -571,7 +571,7 @@ export const i18n_en = {
         delete_data_description: `If you want, you can also delete all your data here, once deleted it can't be recovered.
             Don't worry you will be asked to confirm before anything is deleted.`,
         delete_songs_and_folders: "Delete songs and folders",
-        delete_songs_and_folders_tooltip: "Here you can delete all your themes",
+        delete_songs_and_folders_tooltip: "Here you can delete all your songs and folders",
         delete_themes_tooltip: "Here you can delete all your themes",
         delete_themes: "Delete themes",
     },
@@ -1052,3 +1052,5 @@ export const i18n_en = {
     }
 } as const
 
+
+//console.log(JSON.stringify(i18n_en, null, 4))

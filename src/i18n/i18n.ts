@@ -27,10 +27,14 @@ declare module 'i18next' {
 export const AVAILABLE_LANGUAGES = [
     'en',
     'zh',
+    'zh-HK',
+    'zh-TW',
     'id',
     'pt',
     'ru',
-    'tr'
+    'tr',
+    'ja',
+    'ko',
 ] as const;
 export type AppLanguage = typeof AVAILABLE_LANGUAGES[number];
 i18next

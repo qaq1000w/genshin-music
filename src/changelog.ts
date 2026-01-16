@@ -7,6 +7,15 @@ type Update = {
 
 export const CHANGELOG: Update[] = [
     {
+        version: '3.6.4',
+        title: "New languages",
+        date: new Date('2026-01-16'),
+        changes: [
+            'Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation',
+            'Improved Turkish translation',
+        ]
+    },
+    {
         version: '3.6.3',
         title: "New instruments (Genshin)",
         date: new Date('2025-07-30'),

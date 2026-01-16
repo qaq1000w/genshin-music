@@ -17,19 +17,28 @@ const flagsMap = {
     'en': '🇬🇧',
     //'it': '🇮🇹',
     'zh': '🇨🇳',
+    'zh-HK': '🇭🇰',
+    'zh-TW': '🇹🇼',
     "id": '🇮🇩',
     'pt': '🇧🇷',
     'ru': '🇷🇺',
-    'tr': '🇹🇷'
+    'tr': '🇹🇷',
+    'ja': '🇯🇵',
+    'ko': '🇰🇷',
 } satisfies Record<AppLanguage, string>
+
 const namesMap = {
     'en': 'English',
     //'it': 'Italian',
     'zh': '中文',
+    'zh-HK': '中文（香港）',
+    'zh-TW': '中文（台灣）',
     "id": 'Indonesia',
     'pt': 'Brasileiro',
     'ru': 'русский',
-    'tr': 'Türkçe'
+    'tr': 'Türkçe',
+    'ja': '日本語',
+    'ko': '한국어',
 } satisfies Record<AppLanguage, string>
 
 function getNameOfLocale(locale: AppLanguage) {

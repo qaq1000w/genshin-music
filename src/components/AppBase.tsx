@@ -115,8 +115,13 @@ function AppBase() {
     useEffect(() => {
         try {
             const lang = (localStorage.getItem(LANG_PREFERENCE_KEY_NAME) ?? navigator.language ?? "en") as string | string[]
-            const rootLang = ((Array.isArray(lang) ? lang[0] : lang).split("-")[0]).toLowerCase()
-            const langToUse = (AVAILABLE_LANGUAGES.includes(rootLang as AppLanguage) ? rootLang : 'en') as AppLanguage
+            const langName = ((Array.isArray(lang) ? lang[0] : lang))
+            const rootLang = langName.split("-")[0].toLowerCase()
+            const langToUse = AVAILABLE_LANGUAGES.includes(langName as AppLanguage)
+                ? langName as AppLanguage
+                : AVAILABLE_LANGUAGES.includes(rootLang as AppLanguage)
+                    ? rootLang as AppLanguage
+                    : 'en'
             window.document.documentElement.lang = langToUse
             setI18nLanguage(i18n, langToUse)
         } catch (e) {
