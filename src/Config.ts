@@ -6,10 +6,10 @@ export const APP_VERSION = '3.6.4' as const
 console.log(`${APP_NAME}-V${APP_VERSION}`)
 export const UPDATE_MESSAGE = (APP_NAME === 'Genshin'
     ? `
-Added Chinese (Hong Kong), Chinese (Taiwan) and Japanese translation
+Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation
     `
     : `
-Added Chinese (Hong Kong), Chinese (Taiwan) and Japanese translation
+Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation
     `).trim()
 
 export const UPDATE_URL = process.env.NODE_ENV === 'development'

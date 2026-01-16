@@ -11,7 +11,7 @@ export const CHANGELOG: Update[] = [
         title: "New languages",
         date: new Date('2026-01-16'),
         changes: [
-            'Added Chinese (Hong Kong), Chinese (Taiwan) and Japanese translation',
+            'Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation',
             'Improved Turkish translation',
         ]
     },
