@@ -730,9 +730,14 @@
         "SFX_MothCall": "Kelebek sesi",
         "GrandPiano": "Kuyruklu Piyano",
         "LingeringEuphonia": "Hiç Bitmeyen Ezgi",
-        "LeapingSpiritPiano": "Sıçrayan Ruh Piyanosu"
+        "Harmonic Key":"Armonik Klavye",
+        "LeapingSpiritPiano": "Sıçrayan Ruh Piyanosu"        
     },
     "versions": {
+        "3-6-5": {
+            "title": "Yeni enstrümanlar (Genshin)",
+            "change-1": "Armonik Klavye eklendi (Genshin)"
+        },
         "3-6-3": {
             "title": "Yeni enstrümanlar (Genshin)",
             "change-1": "Sıçrayan Ruh Piyanosu eklendi (Genshin)"
