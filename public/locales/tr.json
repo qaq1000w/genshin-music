@@ -730,7 +730,7 @@
         "SFX_MothCall": "Kelebek sesi",
         "GrandPiano": "Kuyruklu Piyano",
         "LingeringEuphonia": "Hiç Bitmeyen Ezgi",
-        "Harmonic Key":"Armonik Klavye",
+        "HarmonicKey":"Armonik Klavye",
         "LeapingSpiritPiano": "Sıçrayan Ruh Piyanosu"        
     },
     "versions": {
