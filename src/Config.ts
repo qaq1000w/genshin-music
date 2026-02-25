@@ -2,14 +2,14 @@ import type {Tauri} from "$types/TauriTypes"
 import type {NoteImage} from "$cmp/shared/SvgNotes"
 
 export const APP_NAME: AppName = process.env.NEXT_PUBLIC_APP_NAME as AppName || ["Sky", "Genshin"][1]
-export const APP_VERSION = '3.6.4' as const
+export const APP_VERSION = '3.6.5' as const
 console.log(`${APP_NAME}-V${APP_VERSION}`)
 export const UPDATE_MESSAGE = (APP_NAME === 'Genshin'
     ? `
-Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation
+Added new instruments: Harmonic Key (genshin)
     `
     : `
-Added Chinese (Hong Kong), Chinese (Taiwan), Japanese and Korean translation
+Added new instruments: Harmonic Key (genshin)
     `).trim()
 
 export const UPDATE_URL = process.env.NODE_ENV === 'development'
@@ -45,6 +45,7 @@ export const INSTRUMENTS = APP_NAME === "Genshin"
         "Ukulele",
         "LingeringEuphonia",
         "LeapingSpiritPiano",
+        "HarmonicKey",
         "DunDun",
         "DjemDjemDrum"
     ] as const
@@ -178,6 +179,10 @@ export const LAYOUT_KINDS = {
             "Q W E R T Y U " +
             "A S D F G H J " +
             "Z X C V B N M").split(" "),
+        numberLayout: (
+            "1 2 3 4 5 6 7 " +
+            "1 2 3 4 5 6 7 " +
+            "1 2 3 4 5 6 7").split(" "),
         mobileLayout: (
             "do re mi fa so la ti " +
             "do re mi fa so la ti " +
@@ -193,6 +198,9 @@ export const LAYOUT_KINDS = {
         keyboardLayout: (
             "Q W E R " +
             "A S D F").split(" "),
+        numberLayout: (
+            "1 2 3 4 " +
+            "1 2 3 4").split(" "),
         mobileLayout: (
             "do re mi fa " +
             "do re mi fa").split(" "),
@@ -213,6 +221,10 @@ export const LAYOUT_KINDS = {
             "Q W E R T " +
             "A S D F G " +
             "Z X C V B").split(" "),
+        numberLayout: (
+            "1 2 3 4 5 " +
+            "1 2 3 4 5 " +
+            "1 2 3 4 5").split(" "),
         mobileLayout: (
             "do re mi fa so " +
             "do re mi fa so " +
@@ -250,10 +262,14 @@ export const LAYOUT_KINDS = {
             "Zl Zr ⟱ " +
             "Y ⟰ X"
         ).split(" "),
+        numberLayout: (
+            "1 2 3 " +
+            "1 2 3"
+        ).split(" ")
     },
 
 }
-//TODO add the instrument data like layout kinds here instead of LAYOUT_KINDS
+//TODO 在此处添加乐器数据（如布局类型），而不是使用LAYOUT_KINDS
 export const LAYOUT_ICONS_KINDS = {
     defaultSky: "dmcr dm cr dm cr cr dm dmcr dm cr cr dm cr dm dmcr".split(" ") as NoteImage[],
     defaultSkyDrums: "cr dm cr dm cr dm cr dm".split(" ") as NoteImage[],
@@ -272,6 +288,7 @@ export type NoteNameType =
     | 'No Text'
     | 'Playstation'
     | 'Switch'
+    | 'Number Layout'
 
 export const NOTE_NAME_TYPES: NoteNameType[] = APP_NAME === "Genshin"
     ? [
@@ -280,7 +297,8 @@ export const NOTE_NAME_TYPES: NoteNameType[] = APP_NAME === "Genshin"
         "Your Keyboard layout",
         "Do Re Mi",
         "ABC",
-        "No Text"
+        "No Text",
+        "Number Layout",
     ]
     : [
         "Note name",
@@ -291,6 +309,7 @@ export const NOTE_NAME_TYPES: NoteNameType[] = APP_NAME === "Genshin"
         "No Text",
         "Playstation",
         "Switch",
+        "Number Layout",
     ]
 
 export type InstrumentDataType = {
@@ -382,6 +401,17 @@ export const BaseinstrumentsData: { [key in string]: InstrumentDataType } = APP_
         icons: LAYOUT_ICONS_KINDS.defaultGenshin,
         midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
     },
+    "HarmonicKey": {
+        notes: 21,
+        fill: '#ddb055',
+        family: "strings",
+        midiName: "pizzicato strings",
+        clickColor: '#e1cba3',
+        baseNotes: INSTRUMENT_NOTE_LAYOUT_KINDS.genshinUkulele,
+        layout: LAYOUT_KINDS.defaultGenshin,
+        icons: LAYOUT_ICONS_KINDS.defaultGenshin,
+        midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
+    },
     "LeapingSpiritPiano": {
         notes: 21,
         fill: '#5cadbd',
@@ -392,7 +422,7 @@ export const BaseinstrumentsData: { [key in string]: InstrumentDataType } = APP_
         layout: LAYOUT_KINDS.defaultGenshin,
         icons: LAYOUT_ICONS_KINDS.defaultGenshin,
         midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
-    },
+    },    
     DunDun: {
         notes: 8,
         family: "percussive",

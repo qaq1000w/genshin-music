@@ -7,6 +7,14 @@ type Update = {
 
 export const CHANGELOG: Update[] = [
     {
+        version: '3.6.5',
+        title: "New instruments (Genshin)",
+        date: new Date('2026-02-25'),
+        changes: [
+            'Added Harmonic Key (Genshin)'
+        ]
+    },
+    {
         version: '3.6.4',
         title: "New languages",
         date: new Date('2026-01-16'),
