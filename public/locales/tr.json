@@ -730,13 +730,13 @@
         "SFX_MothCall": "Kelebek sesi",
         "GrandPiano": "Kuyruklu Piyano",
         "LingeringEuphonia": "Hiç Bitmeyen Ezgi",
-        "HarmonicKey":"Armonik Klavye",
+        "Harmonic Key":"Harmonik Klavye",
         "LeapingSpiritPiano": "Sıçrayan Ruh Piyanosu"        
     },
     "versions": {
-        "3-6-5": {
+        "3-7-0": {
             "title": "Yeni enstrümanlar (Genshin)",
-            "change-1": "Armonik Klavye eklendi (Genshin)"
+            "change-1": "Harmonik Klavye eklendi (Genshin)"
         },
         "3-6-3": {
             "title": "Yeni enstrümanlar (Genshin)",

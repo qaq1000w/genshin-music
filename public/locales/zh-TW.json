@@ -693,7 +693,7 @@
         "DjemDjemDrum": "聚聚鼓",
         "LingeringEuphonia": "餘音",
         "LeapingSpiritPiano": "躍律琴",
-        "HarmonicKey":"諧律鍵琴",
+        "Harmonic Key":"諧律鍵琴",
         "Piano": "鋼琴",
         "Grand Piano": "大鋼琴",
         "Contrabass": "屁琴",
@@ -729,7 +729,7 @@
         "SFX_MothCall": "幼童之聲"
     },
     "versions": {
-        "3-6-5": {
+        "3-7-0": {
             "title": "原神新樂器",
             "change-1": "新增樂器：諧律鍵琴 (原神)"
         },
