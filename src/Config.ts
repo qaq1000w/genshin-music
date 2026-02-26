@@ -404,10 +404,10 @@ export const BaseinstrumentsData: { [key in string]: InstrumentDataType } = APP_
     "HarmonicKey": {
         notes: 21,
         fill: '#ddb055',
-        family: "strings",
-        midiName: "pizzicato strings",
+        family: "piano",
+        midiName: "acoustic grand",
         clickColor: '#e1cba3',
-        baseNotes: INSTRUMENT_NOTE_LAYOUT_KINDS.genshinUkulele,
+        baseNotes: INSTRUMENT_NOTE_LAYOUT_KINDS.defaultGenshin,
         layout: LAYOUT_KINDS.defaultGenshin,
         icons: LAYOUT_ICONS_KINDS.defaultGenshin,
         midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
