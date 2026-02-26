@@ -7,9 +7,11 @@ console.log(`${APP_NAME}-V${APP_VERSION}`)
 export const UPDATE_MESSAGE = (APP_NAME === 'Genshin'
     ? `
 Added new instruments: Harmonic Key (genshin)
+Added new Layout: number layout
     `
     : `
 Added new instruments: Harmonic Key (genshin)
+Added new Layout: number layout
     `).trim()
 
 export const UPDATE_URL = process.env.NODE_ENV === 'development'
@@ -269,7 +271,7 @@ export const LAYOUT_KINDS = {
     },
 
 }
-//TODO 在此处添加乐器数据（如布局类型），而不是使用LAYOUT_KINDS
+//TODO add the instrument data like layout kinds here instead of LAYOUT_KINDS
 export const LAYOUT_ICONS_KINDS = {
     defaultSky: "dmcr dm cr dm cr cr dm dmcr dm cr cr dm cr dm dmcr".split(" ") as NoteImage[],
     defaultSkyDrums: "cr dm cr dm cr dm cr dm".split(" ") as NoteImage[],
@@ -390,7 +392,7 @@ export const BaseinstrumentsData: { [key in string]: InstrumentDataType } = APP_
         icons: LAYOUT_ICONS_KINDS.defaultGenshin,
         midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
     },
-    "LingeringEuphonia": {
+    "LingeringEuphonia": {//guitar
         notes: 21,
         fill: '#9288d3',
         family: "strings",
@@ -422,7 +424,7 @@ export const BaseinstrumentsData: { [key in string]: InstrumentDataType } = APP_
         layout: LAYOUT_KINDS.defaultGenshin,
         icons: LAYOUT_ICONS_KINDS.defaultGenshin,
         midiNotes: INSTRUMENT_MIDI_LAYOUT_KINDS.defaultGenshin
-    },    
+    },
     DunDun: {
         notes: 8,
         family: "percussive",
